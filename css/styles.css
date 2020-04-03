@@ -9,9 +9,10 @@ body{
   flex-direction: column;
 }
 .form-cont{
-  border: 2px #00A8E8 solid;
+  border: 3px #00A8E8 solid;
   height: 60%;
   width: 50%;
+  border-radius: 2rem;;
 }
 
 form{
@@ -24,5 +25,31 @@ form{
 }
 
 button{
-  width: 10%
+  padding: .5rem;
+  width: 10%;
+  border: 2px solid #00A8E8;
+  border-radius: .2rem;
+  background: none;
+  color: #00A8E8;
+  transition: all 1s linear;
+}
+button:hover{
+ transform: scale(1.1);
+ border: 2px dashed #FAA916;
+ color: #FAA916;
+ background-color: rgba(255, 255, 255, 0.197);
+}
+
+input{
+  background: none;
+  border: none;
+  border-bottom: solid #00A8E8;
+  text-align: center;
+  color: #FAA916;
+}
+input::placeholder{
+  color: #00A8E8;
+}
+input:hover::placeholder{
+  color: #FAA916;
 }
