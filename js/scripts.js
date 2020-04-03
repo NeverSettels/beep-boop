@@ -26,14 +26,19 @@ $(document).ready(function () {
     let number = parseInt($("#number").val());
     let result = popArray(name, number);
     typeWriter(result, '#result', 0)
-    $('body').mousemove(() => {
-      let numLetters = result.length
-      let randomLetter = Math.floor(Math.random() * numLetters)
-      let colors = ['yellow', 'blue', 'green']
-      let randIndex = Math.floor(Math.random() * 3)
-      console.log(`#span${numLetters}`);
-      $(`#span${randomLetter}`).removeClass()
-      $(`#span${randomLetter}`).addClass(`${colors[randIndex]}`)
+    // $('body').mousemove(() => {
+    //   let numLetters = result.length
+    //   let randomLetter = Math.floor(Math.random() * numLetters)
+    //   console.log(`#span${numLetters}`);
+
+    //   $(`#span${randomLetter}`).addClass(`blue`)
+    // })
+    $('span').mouseover(event => {
+      console.log(event.target.id)
+      $(`#${event.target.id}`).addClass(`blue`)
+      setTimeout(() => {
+        $(`#${event.target.id}`).removeClass(`blue`)
+      }, 2000);
     })
   })
 

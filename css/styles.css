@@ -65,3 +65,6 @@ input:hover::placeholder{
 .white{
   color: white
 }
+span{
+  transition: 1s linear all;
+}
