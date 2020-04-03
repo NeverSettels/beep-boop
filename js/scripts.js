@@ -18,7 +18,7 @@ let typeWriter = (str, parent, index) => {
   let randIndex = Math.floor(Math.random() * 3)
   if (index < str.length) {
     $(parent).append(`<span class=${colors[randIndex]}>${str[index]}</span>`)
-    setTimeout(typeWriter(str, parent, index + 1), 500);
+    setInterval(typeWriter(str, parent, index + 1), 3000);
   }
 }
 $(document).ready(() => {
