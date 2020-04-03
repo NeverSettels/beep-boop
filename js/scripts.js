@@ -18,9 +18,18 @@ let popArray = (name, number) => {
 $(document).ready(() => {
   $('#form').submit(event => {
     event.preventDefault();
-    var name = $('#name').val()
-    var number = parseInt($("#number").val());
-    var result = popArray(name, number);
+    let name = $('#name').val()
+    let number = parseInt($("#number").val());
+    let result = popArray(name, number);
+    let resultArr = result.split('')
     $("#result").html(`<p>${result}</p>`)
+    let colors = ['yellow', 'blue', 'green']
+    resultArr.forEach((letter, i) => {
+      let randIndex = Math.floor(Math.random() * 3)
+
+      console.log(colors[randIndex])
+      $(`#result p:nth-child(${i})`).addClass(colors[randIndex])
+    })
+
   })
 })

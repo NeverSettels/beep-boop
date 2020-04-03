@@ -53,3 +53,12 @@ input::placeholder{
 input:hover::placeholder{
   color: #FAA916;
 }
+.yellow{
+  color: #FAA916
+}
+.blue{
+  color: #00A8E8
+}
+.green{
+  color: #16DB65
+}
