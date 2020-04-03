@@ -14,19 +14,27 @@ let popArray = (name, number) => {
   return resultArr.join(' ')
 }
 let typeWriter = (str, parent, index) => {
-  let colors = ['yellow', 'blue', 'green']
-  let randIndex = Math.floor(Math.random() * 3)
   if (index < str.length) {
-    $(parent).append(`<span class=${colors[randIndex]}>${str[index]}</span>`)
+    $(parent).append(`<span id="span${index}">${str[index]}</span>`)
     setInterval(typeWriter(str, parent, index + 1), 3000);
   }
 }
-$(document).ready(() => {
-  $('#form').submit(event => {
+$(document).ready(function () {
+  $('#form').submit(function (event) {
     event.preventDefault();
     let name = $('#name').val()
     let number = parseInt($("#number").val());
     let result = popArray(name, number);
     typeWriter(result, '#result', 0)
+    $('body').mousemove(() => {
+      let numLetters = result.length
+      let randomLetter = Math.floor(Math.random() * numLetters)
+      let colors = ['yellow', 'blue', 'green']
+      let randIndex = Math.floor(Math.random() * 3)
+      console.log(`#span${numLetters}`);
+      $(`#span${randomLetter}`).removeClass()
+      $(`#span${randomLetter}`).addClass(`${colors[randIndex]}`)
+    })
   })
+
 })
