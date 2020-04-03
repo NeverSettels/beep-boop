@@ -53,13 +53,17 @@ $(document).ready(function () {
     let result = popArray(name, number);
     typeWriter(result, '#result', 0)
     mouseoverEffect();
-    $('#form-cont').slideToggle('.no-show')
-    $('#result-cont').slideToggle('.no-show')
+    $('#form-cont').toggle('.no-show')
+    $('#result-cont').toggle('.no-show')
     $('#result-cont').attr("style", 'display:flex')
 
   })
   $('#redo').click(() => {
-    window.location.reload();
+    $('body').html(`<div class='goodbye'><h1>Good Bye!</h1></div>`)
+    setTimeout(() => {
+      window.location.reload();
+    }, 5000);
+
   })
 
 })
