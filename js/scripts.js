@@ -13,12 +13,38 @@ let popArray = (name, number) => {
   })
   return resultArr.join(' ')
 }
+
+
+
+//back end
 let typeWriter = (str, parent, index) => {
   if (index < str.length) {
     $(parent).append(`<span id="span${index}">${str[index]}</span>`)
     setInterval(typeWriter(str, parent, index + 1), 3000);
   }
 }
+
+let mouseoverEffect = () => {
+  $('span').mouseover(event => {
+    console.log(event.target.id)
+    $(`#${event.target.id}`).addClass(`blue`)
+    setTimeout(() => {
+      $(`#${event.target.id}`).removeClass(`blue`)
+    }, 2000);
+  })
+}
+
+
+let mousemoveEffect = () => {
+  $('body').mousemove(() => {
+    let numLetters = result.length
+    let randomLetter = Math.floor(Math.random() * numLetters)
+    console.log(`#span${numLetters}`);
+
+    $(`#span${randomLetter}`).addClass(`blue`)
+  })
+}
+
 $(document).ready(function () {
   $('#form').submit(function (event) {
     event.preventDefault();
@@ -26,20 +52,11 @@ $(document).ready(function () {
     let number = parseInt($("#number").val());
     let result = popArray(name, number);
     typeWriter(result, '#result', 0)
-    // $('body').mousemove(() => {
-    //   let numLetters = result.length
-    //   let randomLetter = Math.floor(Math.random() * numLetters)
-    //   console.log(`#span${numLetters}`);
+    mouseoverEffect();
+    $('#form-cont').slideToggle('.no-show')
+    $('#result-cont').slideToggle('.no-show')
+    $('#result-cont').attr("style", 'display:flex')
 
-    //   $(`#span${randomLetter}`).addClass(`blue`)
-    // })
-    $('span').mouseover(event => {
-      console.log(event.target.id)
-      $(`#${event.target.id}`).addClass(`blue`)
-      setTimeout(() => {
-        $(`#${event.target.id}`).removeClass(`blue`)
-      }, 2000);
-    })
   })
 
 })

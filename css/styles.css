@@ -8,11 +8,15 @@ body{
   align-items: center;
   flex-direction: column;
 }
-.form-cont{
+.cont{
   border: 3px #00A8E8 solid;
   height: 60%;
   width: 50%;
-  border-radius: 2rem;;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 form{
@@ -67,4 +71,10 @@ input:hover::placeholder{
 }
 span{
   transition: 1s linear all;
+}
+#result{
+  padding: 1rem
+}
+.no-show{
+  display: none;
 }
