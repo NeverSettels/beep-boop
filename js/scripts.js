@@ -27,9 +27,9 @@ let typeWriter = (str, parent, index) => {
 let mouseoverEffect = () => {
   $('span').mouseover(event => {
     console.log(event.target.id)
-    $(`#${event.target.id}`).addClass(`blue`)
+    $(`#${event.target.id}`).addClass(`trasparent`)
     setTimeout(() => {
-      $(`#${event.target.id}`).removeClass(`blue`)
+      $(`#${event.target.id}`).removeClass(`trasparent`)
     }, 2000);
   })
 }
@@ -41,7 +41,7 @@ let mousemoveEffect = () => {
     let randomLetter = Math.floor(Math.random() * numLetters)
     console.log(`#span${numLetters}`);
 
-    $(`#span${randomLetter}`).addClass(`blue`)
+    $(`#span${randomLetter}`).addClass(`transparent`)
   })
 }
 

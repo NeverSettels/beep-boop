@@ -69,11 +69,20 @@ input:hover::placeholder{
 .white{
   color: white
 }
+.trasparent{
+  color: transparent;
+}
 span{
-  transition: 1s linear all;
+  transition: .5s linear all;
+  font-size: 2rem;
+  
 }
 #result{
-  padding: 1rem
+  padding: 1rem;
+  background-image: radial-gradient(circle, #dc0073, #d32c98, #c049b9, #a461d4, #7b75e9, #9875e9, #b275e8, #ca75e6, #ff64b9, #ff6c7f, #ff8e45, #f5b700);
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-align: center;
 }
 .no-show{
   display: none;
