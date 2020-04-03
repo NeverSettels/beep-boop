@@ -1,4 +1,4 @@
-# Beep, Boop, Neighbor
+# Beep, Boop
 #### _Epicodus Code Review_ - _4/3/2020_
 
 #### _Eric Settels_
@@ -17,7 +17,7 @@ A fun little website that allows you to input a number and find all 1's 2's and 
 5. Step five: Drag the html file into your broswer. 
 6. Step six: Discover the Secret of entering a number
 
-or check it out at [GH-pages]()
+or check it out at [GH-pages]('https://neversettels.github.io/beep-boop/)
 
 
 ## **Specs**
@@ -55,6 +55,8 @@ There are no known bugs at this time.
 * GitBash
 
 * Jquery
+
+* Font Awesome
 
 
 ## **License**
