@@ -35,13 +35,58 @@ button{
   border-radius: .2rem;
   background: none;
   color: #00A8E8;
-  transition: all 1s linear;
+  transition: all .5s linear;
+}
+@keyframes gradient{
+  0%{
+    color:#dc0073 ;
+    border: 2px solid #dc0073;
+  }
+  10%{
+   color: #c049b9;
+   border-color:  #c049b9;
+  }
+  20%{
+    color: #7b75e9;
+    border-color:  #7b75e9;
+  }
+  30%{
+    color: #9875e9;
+    border-color:  #9875e9;
+  }
+  40%{
+    color: #ff6c7f;
+    border-color:  #ff6c7f;
+  }
+  50%{
+    color: #f5b700;
+    border: 2px solid #f5b700;
+  }
+  60%{
+    color: #ff6c7f;
+    border-color:  #ff6c7f;
+  }
+  70%{
+    color: #9875e9;
+    border-color:  #9875e9;
+  }
+  80%{
+    color: #7b75e9;
+    border-color:  #7b75e9;
+  }
+  90%{
+    color: #c049b9;
+   border-color:  #c049b9;
+  }
+  100%{
+    color:#dc0073 ;
+    border: 2px solid #dc0073;
+  }
 }
 button:hover{
  transform: scale(1.1);
- border: 2px dashed #FAA916;
- color: #FAA916;
- background-color: rgba(255, 255, 255, 0.197);
+ background-color: rgba(255, 255, 255, 0.088);
+ animation: gradient 10s linear infinite;
 }
 
 input{

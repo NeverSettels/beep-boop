@@ -58,5 +58,8 @@ $(document).ready(function () {
     $('#result-cont').attr("style", 'display:flex')
 
   })
+  $('#redo').click(() => {
+    window.location.reload();
+  })
 
 })

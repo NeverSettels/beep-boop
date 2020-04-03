@@ -8,19 +8,21 @@
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/jquery-3.4.1.js"></script>
   <script src="js/scripts.js"></script>
+  <script src="https://kit.fontawesome.com/16db93e62b.js" crossorigin="anonymous"></script>
   <title>Beep, Boop</title>
 </head>
 
 <body>
   <div id="form-cont" class="cont">
     <form action="" id="form">
-      <input type="text" id="name" placeholder="Enter You Name:">
-      <input type="number" id="number" placeholder="Enter a Number:">
-      <button type="submit">Go</button>
+      <input type="text" id="name" placeholder="Enter You Name:" required>
+      <input type="number" id="number" placeholder="Enter a Number:" min="1" required>
+      <button type="submit"><i class="fas fa-play-circle"></i></button>
     </form>
   </div>
   <div id="result-cont" class='cont no-show'>
     <div id="result"></div>
+    <button id='redo'><i class="fas fa-redo-alt"></i></button>
   </div>
 </body>
 
