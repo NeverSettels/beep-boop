@@ -13,4 +13,14 @@ let popArray = (name, number) => {
   })
   return resultArr.join(' ')
 }
-console.log(popArray('eric', 5));
+
+
+$(document).ready(() => {
+  $('#form').submit(event => {
+    event.preventDefault();
+    var name = $('#name').val()
+    var number = parseInt($("#number").val());
+    var result = popArray(name, number);
+    $("#result").html(`<p>${result}</p>`)
+  })
+})
