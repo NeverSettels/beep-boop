@@ -22,13 +22,13 @@ $(document).ready(() => {
     let number = parseInt($("#number").val());
     let result = popArray(name, number);
     let resultArr = result.split('')
-    $("#result").html(`<p>${result}</p>`)
     let colors = ['yellow', 'blue', 'green']
-    resultArr.forEach((letter, i) => {
+    resultArr.forEach(async (letter, i) => {
       let randIndex = Math.floor(Math.random() * 3)
+      setTimeout(() => {
+        await $(`#result`).append(`<span class=${colors[randIndex]}>${letter}</span>`)
+      }, 3000);
 
-      console.log(colors[randIndex])
-      $(`#result p:nth-child(${i})`).addClass(colors[randIndex])
     })
 
   })
