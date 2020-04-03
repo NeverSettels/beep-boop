@@ -13,23 +13,20 @@ let popArray = (name, number) => {
   })
   return resultArr.join(' ')
 }
-
-
+let typeWriter = (str, parent, index) => {
+  let colors = ['yellow', 'blue', 'green']
+  let randIndex = Math.floor(Math.random() * 3)
+  if (index < str.length) {
+    $(parent).append(`<span class=${colors[randIndex]}>${str[index]}</span>`)
+    setTimeout(typeWriter(str, parent, index + 1), 500);
+  }
+}
 $(document).ready(() => {
   $('#form').submit(event => {
     event.preventDefault();
     let name = $('#name').val()
     let number = parseInt($("#number").val());
     let result = popArray(name, number);
-    let resultArr = result.split('')
-    let colors = ['yellow', 'blue', 'green']
-    resultArr.forEach(async (letter, i) => {
-      let randIndex = Math.floor(Math.random() * 3)
-      setTimeout(() => {
-        await $(`#result`).append(`<span class=${colors[randIndex]}>${letter}</span>`)
-      }, 3000);
-
-    })
-
+    typeWriter(result, '#result', 0)
   })
 })
