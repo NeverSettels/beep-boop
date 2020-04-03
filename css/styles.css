@@ -3,7 +3,26 @@ body{
   height: 100vh;
   background-color: #00171F;
   color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .form-cont{
+  border: 2px #00A8E8 solid;
+  height: 60%;
+  width: 50%;
+}
 
+form{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+button{
+  
 }
