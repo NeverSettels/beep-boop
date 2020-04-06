@@ -17,7 +17,7 @@ A fun little website that allows you to input a number and find all 1's 2's and 
 5. Step five: Drag the html file into your broswer. 
 6. Step six: Discover the Secret of entering a number
 
-or check it out at [GH-pages]('https://neversettels.github.io/beep-boop/')
+or check it out at [GH-pages](https://neversettels.github.io/beep-boop/)
 
 
 ## **Specs**
